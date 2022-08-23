@@ -40,7 +40,7 @@ const createHotel = async( req, res)=>{
  // get all hotel
  const getAllHotel = async( req, res)=>{
       try {
-        const hotel = await Hotel.find({});
+        const hotel = await Hotel.find({})
          res.status(500).json(hotel)
       } catch (error) {
         res.status(500).json(error)

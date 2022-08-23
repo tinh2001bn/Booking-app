@@ -39,9 +39,14 @@ const bcrypt = require('bcryptjs')
   })
 
 
+    //login
+  userSchema.methods.matchpassWord = async(enterPassword)=>{
+      return  await bcrypt.compare(this.password,enterPassword )
+  }
 
 
-  userSchema.pre("save", async function (next) {
+    // Register
+userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) {
       next();
     }

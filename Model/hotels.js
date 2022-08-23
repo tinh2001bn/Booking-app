@@ -56,4 +56,6 @@ const mongoose = require('mongoose');
   })
 
   const hotels = mongoose.model('Hotel', hotelSchema);
+
+  
    module.exports= hotels;
